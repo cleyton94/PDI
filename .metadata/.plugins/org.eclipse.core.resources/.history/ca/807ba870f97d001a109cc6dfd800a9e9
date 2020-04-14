@@ -28,6 +28,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.image.ImageObserver;
 
 /**
  * Universidade Federal Rural de Pernambuco
@@ -193,6 +194,10 @@ public class ImagemDigital {
 		}
 	}
 
-	
+	public static void main(String[] args) throws Exception {
+		int[][] imagem = carregarImagem("C:/imagens/Fig0222(a)(face).png");
+		plotarImagem(imagem, "nome");
+		// salvarImagemPNG(imagem, "teste.png");
+	}
 
 }

@@ -28,6 +28,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.image.ImageObserver;
 
 /**
  * Universidade Federal Rural de Pernambuco
@@ -60,9 +61,9 @@ public class ImagemDigital {
 	/**
 	 * 
 	 * @param x
-	 *            posição X do ponto na tela
+	 *            posiï¿½ï¿½o X do ponto na tela
 	 * @param y
-	 *            posição Y do ponto na tela
+	 *            posiï¿½ï¿½o Y do ponto na tela
 	 * @param cor
 	 *            cor a ser pintada
 	 */
@@ -95,12 +96,12 @@ public class ImagemDigital {
 
 	/**
 	 * Carrega um arquivo de imagem e o converte em um array bidimensional de
-	 * uma imagem em tons de cinza. Mínimo 0 e máximo 255 em cada posiçãoo do
-	 * array. Se uma imagem colorida for carregada, apenas o espectro vermelho é
+	 * uma imagem em tons de cinza. Mï¿½nimo 0 e mï¿½ximo 255 em cada posiï¿½ï¿½o do
+	 * array. Se uma imagem colorida for carregada, apenas o espectro vermelho ï¿½
 	 * considerado.
 	 * 
 	 * @param nomeArquivo
-	 *            endereçoo da imagem.
+	 *            endereï¿½o da imagem.
 	 * @return
 	 */
 	public static int[][] carregarImagem(String nomeArquivo) {
@@ -139,9 +140,9 @@ public class ImagemDigital {
 	 * Mostra uma imagem na tela
 	 * 
 	 * @param imagem
-	 *            É importante lembrar que o limite dos inteiros é de 0 e 255.
+	 *            ï¿½ importante lembrar que o limite dos inteiros ï¿½ 0 e 255.
 	 * @param nome
-	 *            informações mostrada no título da janela.
+	 *            informaï¿½ï¿½o mostrada no tï¿½tulo da janela.
 	 * @return
 	 */
 	public static ImagemDigital plotarImagem(int[][] imagem, String nome) {
@@ -167,7 +168,6 @@ public class ImagemDigital {
 	 * @param enderecoImagem
 	 *            deve constar .png no final do nome do arquivo.
 	 */
-	
 	public static void salvarImagemPNG(int[][] imagem, String enderecoImagem) {
 		try {
 			Iterator<ImageWriter> writers = ImageIO
@@ -193,6 +193,10 @@ public class ImagemDigital {
 		}
 	}
 
-	
+	public static void main(String[] args) throws Exception {
+		int[][] imagem = carregarImagem("./cap02/Fig0222(a)(face).png");
+		plotarImagem(imagem, "nome");
+		// salvarImagemPNG(imagem, "teste.png");
+	}
 
 }
