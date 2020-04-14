@@ -161,10 +161,11 @@ public class ImagemDigital {
 	}
 
 	/**
-	 * Salva uma matriz de inteiros como uma imagem em tons de cinza no formato * PNG.
+	 * Salva uma matriz de inteiros como uma imagem em tons de cinza no formato
+	 * PNG.
 	 * 
 	 * @param imagem
-	 *          é importante lembrar que o limite dos inteiros é de  0 e 255.
+	 *            ï¿½ importante lembrar que o limite dos inteiros ï¿½ 0 e 255.
 	 * @param enderecoImagem
 	 *            deve constar .png no final do nome do arquivo.
 	 */
